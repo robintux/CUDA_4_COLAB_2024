@@ -1,3 +1,17 @@
+#define N 10
+
+__global__ void matrix_mul(int *a, int *b, int *c, int n) {
+    int i = blockIdx.x * blockDim.x + threadIdx.x;
+    int j = blockIdx.y * blockDim.y + threadIdx.y;
+    int sum = 0;
+    if (i < n && j < n) {
+        for (int k = 0; k < n; k++)
+            sum += a[i * n + k] * b[k * n + j];
+        c[i * n + j] = sum;
+    }
+}
+
+
 int main() {
     int n = N;
     int *a, *b, *c;
