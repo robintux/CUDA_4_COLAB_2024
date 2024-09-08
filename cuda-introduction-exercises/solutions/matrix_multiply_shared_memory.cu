@@ -74,15 +74,20 @@ __global__ void matrixMultiply(int size, double *src_matrix_1, double *src_matri
 
 int main(int argc, char * argv[])
 {
-/*
+/* Comentamos esta parte para poder realizar la ejecucion dentro de google colab
+
   if ( argc != 3 ) {
     cout << "Need three arguments: number of columns (= number of rows) of matrix and device to use" << endl;
     return -1;
   }
-*/
+
 
   const int matrix_size = atoi(argv[argc-2]);
   const int device_id = atoi(argv[argc-1]);
+
+*/
+const int matrix_size = 10
+const int device_id = 0 
     
   //Allocate host and device memory for three matrices
   double *host_matrix[3];    //matrix[0] and matrix[1] are the source for the multiplication, result stored in matrix[2]
