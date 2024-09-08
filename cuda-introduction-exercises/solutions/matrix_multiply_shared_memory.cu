@@ -74,10 +74,12 @@ __global__ void matrixMultiply(int size, double *src_matrix_1, double *src_matri
 
 int main(int argc, char * argv[])
 {
+/*
   if ( argc != 3 ) {
     cout << "Need three arguments: number of columns (= number of rows) of matrix and device to use" << endl;
     return -1;
   }
+*/
 
   const int matrix_size = atoi(argv[argc-2]);
   const int device_id = atoi(argv[argc-1]);
