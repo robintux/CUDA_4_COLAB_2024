@@ -86,8 +86,8 @@ int main(int argc, char * argv[])
   const int device_id = atoi(argv[argc-1]);
 
 */
-const int matrix_size = 10
-const int device_id = 0 
+const int matrix_size = 10;
+const int device_id = 0; 
     
   //Allocate host and device memory for three matrices
   double *host_matrix[3];    //matrix[0] and matrix[1] are the source for the multiplication, result stored in matrix[2]
