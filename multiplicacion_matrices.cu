@@ -1,3 +1,4 @@
+#include <iostream>
 #define N 10
 
 __global__ void matrix_mul(int *a, int *b, int *c, int n) {
